@@ -6,8 +6,11 @@ const nextConfig: NextConfig = {
     contentDispositionType: "inline",
     deviceSizes: [640, 768, 1024, 1280, 1536],
     imageSizes: [16, 24, 32, 48, 64, 96, 128, 256, 384],
-    unoptimized: process.env.NODE_ENV === "development",
+    unoptimized: process.env.NODE_ENV === "development"
   },
+  turbopack: {
+    root: process.cwd()
+  }
 };
 
 export default nextConfig;
