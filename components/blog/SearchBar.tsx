@@ -2,14 +2,13 @@
 
 import { Search, X } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useDeferredValue, useEffect, useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 
 export default function SearchBar() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") ?? "");
-  const deferredQuery = useDeferredValue(query);
   const [, startTransition] = useTransition();
 
   useEffect(() => {
@@ -17,21 +16,31 @@ export default function SearchBar() {
   }, [searchParams]);
 
   useEffect(() => {
-    const params = new URLSearchParams(searchParams.toString());
+    const timeoutId = window.setTimeout(() => {
+      const params = new URLSearchParams(searchParams.toString());
 
-    if (deferredQuery.trim()) {
-      params.set("q", deferredQuery.trim());
-    } else {
-      params.delete("q");
-    }
+      if (query.trim()) {
+        params.set("q", query.trim());
+      } else {
+        params.delete("q");
+      }
 
-    params.delete("page");
+      params.delete("page");
 
-    startTransition(() => {
       const nextUrl = params.toString() ? `${pathname}?${params.toString()}` : pathname;
-      router.replace(nextUrl, { scroll: false });
-    });
-  }, [deferredQuery, pathname, router, searchParams]);
+      const currentUrl = searchParams.toString()
+        ? `${pathname}?${searchParams.toString()}`
+        : pathname;
+
+      if (nextUrl !== currentUrl) {
+        startTransition(() => {
+          router.replace(nextUrl, { scroll: false });
+        });
+      }
+    }, 350);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [pathname, query, router, searchParams]);
 
   return (
     <div className="relative">

@@ -1,7 +1,7 @@
 "use client";
 
 import { MessageSquareText } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 import CommentForm from "@/components/forms/CommentForm";
 import { Card } from "@/components/ui/Card";
@@ -21,8 +21,6 @@ export default function CommentsPanel({
 }: CommentsPanelProps) {
   const [comments, setComments] = useState<Comment[]>(initialComments);
 
-  const countLabel = useMemo(() => `${comments.length} bình luận`, [comments.length]);
-
   return (
     <Card className="sticky top-28 grid gap-6">
       <div className="flex items-start justify-between gap-4">
@@ -32,7 +30,7 @@ export default function CommentsPanel({
         </div>
         <span className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-3 py-1 text-xs font-medium text-primary-800">
           <MessageSquareText className="h-4 w-4" />
-          {countLabel}
+          {comments.length} bình luận
         </span>
       </div>
 

@@ -7,10 +7,6 @@
     color-scheme: light;
   }
 
-  * {
-    @apply border-border;
-  }
-
   html {
     scroll-behavior: smooth;
   }
