@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f4ece1"/>
+  <rect x="118" y="130" width="964" height="460" rx="40" fill="#1e1c1a"/>
+  <rect x="176" y="194" width="430" height="332" rx="28" fill="#f6f1eb"/>
+  <rect x="648" y="194" width="376" height="114" rx="26" fill="#28463e"/>
+  <rect x="648" y="336" width="376" height="88" rx="26" fill="#c86420"/>
+  <rect x="648" y="452" width="376" height="74" rx="26" fill="#efe3d4"/>
+  <text x="236" y="286" font-size="48" font-family="Georgia, serif" fill="#1e1c1a">Comments</text>
+  <text x="236" y="346" font-size="24" font-family="Arial, sans-serif" fill="#5a5148">optimistic</text>
+  <text x="236" y="384" font-size="24" font-family="Arial, sans-serif" fill="#5a5148">validation</text>
+  <text x="236" y="422" font-size="24" font-family="Arial, sans-serif" fill="#5a5148">API route</text>
+</svg>

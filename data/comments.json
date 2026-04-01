@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cm-1",
+    "postId": "1",
+    "author": "Thu Hà",
+    "email": "thuha@example.com",
+    "content": "Phần giải thích về route group rất dễ hiểu, đúng kiểu demo để dạy.",
+    "createdAt": "2026-03-25T09:10:00.000Z"
+  },
+  {
+    "id": "cm-2",
+    "postId": "1",
+    "author": "Nam Phan",
+    "email": "namphan@example.com",
+    "content": "Mình muốn thấy thêm ví dụ nested layout ở bài sau.",
+    "createdAt": "2026-03-25T13:25:00.000Z"
+  },
+  {
+    "id": "cm-3",
+    "postId": "2",
+    "author": "Trinh",
+    "email": "trinh@example.com",
+    "content": "Phân biệt server và client component bằng checklist thế này rất dễ nhớ.",
+    "createdAt": "2026-03-22T07:20:00.000Z"
+  },
+  {
+    "id": "cm-4",
+    "postId": "4",
+    "author": "Hoàng",
+    "email": "hoang@example.com",
+    "content": "Đúng ý mình, schema dùng lại cho API route là phần quan trọng nhất.",
+    "createdAt": "2026-03-16T16:40:00.000Z"
+  },
+  {
+    "id": "cm-5",
+    "postId": "7",
+    "author": "Vy Lê",
+    "email": "vyle@example.com",
+    "content": "Cách mô phỏng optimistic update gọn mà vẫn đủ để trình bày trên lớp.",
+    "createdAt": "2026-03-06T10:00:00.000Z"
+  }
+]

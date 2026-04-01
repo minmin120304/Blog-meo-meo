@@ -1,0 +1,194 @@
+[
+  {
+    "id": "1",
+    "title": "Làm quen với Next.js App Router qua một blog thật",
+    "slug": "lam-quen-voi-nextjs-app-router",
+    "excerpt": "Bài viết mở đầu giúp bạn nhìn đúng vai trò của App Router, layout lồng nhau và cách tổ chức route group cho dự án học tập.",
+    "content": "# App Router cho người mới\n\nNext.js App Router không chỉ là đổi tên thư mục. Nó thay đổi cách chúng ta nghĩ về layout, data fetching và server rendering.\n\n## Vì sao nên bắt đầu từ blog?\n\n- Blog có listing page, detail page và contact form.\n- Blog đủ nhỏ để học nhanh nhưng đủ sâu để chạm tới nhiều tính năng của Next.js.\n- Blog giúp so sánh rõ giữa Server Component và Client Component.\n\n## Kết quả mong muốn\n\nBạn sẽ có một dự án chạy được, có SEO tốt, route động và giao diện responsive.\n\n> Hãy coi mỗi route là một bài học độc lập nhưng vẫn gắn với nhau bằng layout và data model.\n\n## Bài tập nhỏ\n\nViết thêm một route `/about` và dùng lại layout chung để thấy lợi ích của App Router.",
+    "coverImage": "/images/posts/app-router.svg",
+    "author": {
+      "id": "a1",
+      "name": "Mai An",
+      "avatar": "/images/authors/mai-an.svg",
+      "bio": "Frontend engineer thích tối giản nhưng không đơn điệu.",
+      "email": "mai.an@example.com"
+    },
+    "category": {
+      "id": "c1",
+      "name": "Tutorial",
+      "slug": "tutorial",
+      "description": "Các hướng dẫn có thể làm lại từng bước."
+    },
+    "publishedAt": "2026-03-24T08:00:00.000Z",
+    "tags": ["nextjs", "app-router", "tutorial"],
+    "readingTime": 6
+  },
+  {
+    "id": "2",
+    "title": "Server Component và Client Component khác nhau ở đâu?",
+    "slug": "server-component-vs-client-component",
+    "excerpt": "Phân biệt đúng nơi đặt logic sẽ giúp ứng dụng nhẹ hơn, ít bug hydration hơn và rõ ràng hơn khi bảo trì.",
+    "content": "# Hai mô hình render trong cùng một ứng dụng\n\nServer Component là mặc định trong App Router. Nó phù hợp cho data fetching, SEO và các phần không cần tương tác phía trình duyệt.\n\n## Dấu hiệu cần Client Component\n\n- Có `useState`, `useEffect` hoặc `useForm`\n- Có event như `onClick`, `onChange`\n- Cần truy cập `window`, `localStorage`\n\n## Dấu hiệu nên giữ ở server\n\n- Gọi dữ liệu bài viết\n- Tính metadata SEO\n- Tạo HTML có nội dung sẵn cho công cụ tìm kiếm\n\n## Mẹo thực hành\n\nHãy giữ cây component ở phía server càng sâu càng tốt, và chỉ bật `use client` cho phần thực sự tương tác.",
+    "coverImage": "/images/posts/server-client.svg",
+    "author": {
+      "id": "a2",
+      "name": "Khánh Duy",
+      "avatar": "/images/authors/khanh-duy.svg",
+      "bio": "Giảng viên chuyên về React và Next.js.",
+      "email": "duy@example.com"
+    },
+    "category": {
+      "id": "c2",
+      "name": "Architecture",
+      "slug": "architecture",
+      "description": "Các bài viết về tư duy tổ chức ứng dụng."
+    },
+    "publishedAt": "2026-03-21T10:30:00.000Z",
+    "tags": ["server-components", "client-components", "architecture"],
+    "readingTime": 7
+  },
+  {
+    "id": "3",
+    "title": "Tối ưu hình ảnh với Next/Image mà không làm giao diện nhàm chán",
+    "slug": "toi-uu-hinh-anh-voi-next-image",
+    "excerpt": "Next/Image không chỉ giảm kích thước ảnh mà còn buộc bạn thiết kế layout hình ảnh có chủ đích hơn.",
+    "content": "# Ảnh tốt là ảnh có ngữ cảnh\n\nMột blog kỹ thuật dễ bị khô nếu hình ảnh chỉ dùng để lấp chỗ trống. Với Next/Image, bạn nên nghĩ tới tỉ lệ khung, crop và nội dung thị giác ngay từ đầu.\n\n## Ba điểm nên nhớ\n\n- Chọn tỉ lệ ảnh nhất quán cho listing page.\n- Dùng `sizes` để trình duyệt chọn nguồn ảnh hợp lý.\n- Đảm bảo alt text có ý nghĩa thật.\n\n## Khi nào dùng ảnh SVG?\n\nSVG phù hợp cho cover minh hoạ, icon hoặc artwork có màu phẳng. Nó nhẹ và dễ version control trong repo học tập.",
+    "coverImage": "/images/posts/image-optimization.svg",
+    "author": {
+      "id": "a1",
+      "name": "Mai An",
+      "avatar": "/images/authors/mai-an.svg",
+      "bio": "Frontend engineer thích tối giản nhưng không đơn điệu.",
+      "email": "mai.an@example.com"
+    },
+    "category": {
+      "id": "c3",
+      "name": "Performance",
+      "slug": "performance",
+      "description": "Các kỹ thuật cải thiện tốc độ và trải nghiệm."
+    },
+    "publishedAt": "2026-03-19T07:15:00.000Z",
+    "tags": ["image", "performance", "ux"],
+    "readingTime": 5
+  },
+  {
+    "id": "4",
+    "title": "Thiết kế form liên hệ với React Hook Form và Zod",
+    "slug": "react-hook-form-zod-contact",
+    "excerpt": "Một form tốt cần phản hồi nhanh, báo lỗi đúng chỗ và không khiến người dùng mất nhịp khi submit.",
+    "content": "# Form tốt là form trung thực\n\nNgười dùng nên biết ngay trường nào đang sai và vì sao. React Hook Form giúp giữ hiệu năng, còn Zod giúp validation rõ ràng và có thể tái sử dụng ở API route.\n\n## Checklist cho form contact\n\n- Báo lỗi ở đúng field\n- Disable nút gửi khi đang submit\n- Reset khi gửi thành công\n- Có toast cho kết quả trả về\n\n## Mẫu tổ chức nên dùng\n\nGiữ schema trong `lib/validations.ts`, dùng lại ở cả client và server để tránh lệch logic.",
+    "coverImage": "/images/posts/forms-validation.svg",
+    "author": {
+      "id": "a3",
+      "name": "Linh Chi",
+      "avatar": "/images/authors/linh-chi.svg",
+      "bio": "UI engineer thích biến form khô khan thành trải nghiệm mượt.",
+      "email": "chi@example.com"
+    },
+    "category": {
+      "id": "c4",
+      "name": "Forms",
+      "slug": "forms",
+      "description": "Form handling, validation và phản hồi người dùng."
+    },
+    "publishedAt": "2026-03-15T09:00:00.000Z",
+    "tags": ["forms", "react-hook-form", "zod"],
+    "readingTime": 8
+  },
+  {
+    "id": "5",
+    "title": "SSR, SSG và CSR: chọn sai là mất cả SEO lẫn hiệu năng",
+    "slug": "ssr-ssg-csr-trong-du-an-blog",
+    "excerpt": "Ba cách render quen thuộc nhưng chỉ thực sự hữu ích khi bạn biết route nào nên dùng cách nào.",
+    "content": "# Đừng chọn rendering theo cảm tính\n\nTrang listing của blog có thể vừa cần SEO vừa cần filter. Trang detail thường phù hợp với SSG kết hợp revalidate. Search bar lại là phần nên xử lý phía client.\n\n## Cách chia cho blog demo\n\n- Homepage: server render với dữ liệu mới nhất\n- Detail page: static params + metadata\n- Search bar: client component cập nhật query string\n\n## Quy tắc thực dụng\n\nNếu nội dung thay đổi ít và cần index tốt, hãy ưu tiên prerender trước.",
+    "coverImage": "/images/posts/rendering-patterns.svg",
+    "author": {
+      "id": "a2",
+      "name": "Khánh Duy",
+      "avatar": "/images/authors/khanh-duy.svg",
+      "bio": "Giảng viên chuyên về React và Next.js.",
+      "email": "duy@example.com"
+    },
+    "category": {
+      "id": "c2",
+      "name": "Architecture",
+      "slug": "architecture",
+      "description": "Các bài viết về tư duy tổ chức ứng dụng."
+    },
+    "publishedAt": "2026-03-12T12:00:00.000Z",
+    "tags": ["ssr", "ssg", "csr"],
+    "readingTime": 6
+  },
+  {
+    "id": "6",
+    "title": "Tạo search trải nghiệm tốt bằng URL params và debounce",
+    "slug": "search-url-params-va-debounce",
+    "excerpt": "Search trong blog không cần phức tạp, nhưng phải đồng bộ URL để chia sẻ và reload không mất trạng thái.",
+    "content": "# URL là state đáng tin cậy\n\nKhi người dùng gõ từ khoá, bạn có thể debounce rồi cập nhật `?q=` trên URL. Điều này giúp back, forward và chia sẻ link hoạt động đúng.\n\n## Những lỗi hay gặp\n\n- Cập nhật URL ở mỗi ký tự mà không debounce\n- Không reset page về 1 khi thay đổi từ khoá\n- Không giữ nguyên category đang chọn\n\n## Cách làm gọn\n\nKết hợp `useSearchParams`, `useRouter` và một input local state.",
+    "coverImage": "/images/posts/search-debounce.svg",
+    "author": {
+      "id": "a3",
+      "name": "Linh Chi",
+      "avatar": "/images/authors/linh-chi.svg",
+      "bio": "UI engineer thích biến form khô khan thành trải nghiệm mượt.",
+      "email": "chi@example.com"
+    },
+    "category": {
+      "id": "c1",
+      "name": "Tutorial",
+      "slug": "tutorial",
+      "description": "Các hướng dẫn có thể làm lại từng bước."
+    },
+    "publishedAt": "2026-03-08T15:20:00.000Z",
+    "tags": ["search", "routing", "ux"],
+    "readingTime": 5
+  },
+  {
+    "id": "7",
+    "title": "Xây comment section giả lập nhưng vẫn đủ đúng để demo luồng dữ liệu",
+    "slug": "comment-section-gia-lap",
+    "excerpt": "Không cần database vẫn có thể dạy được optimistic update, validation và API route nếu tổ chức mock data hợp lý.",
+    "content": "# Demo tốt không nhất thiết phải đầy đủ backend\n\nTrong môi trường học tập, một lớp dữ liệu mock đủ thông minh đã đủ để minh hoạ nhiều khái niệm quan trọng.\n\n## Comment section nên có gì\n\n- Danh sách comment có timestamp\n- Form với validation tối thiểu\n- Optimistic update để người học thấy UI phản hồi ngay\n- API route để giải thích ranh giới client và server\n\n## Điều cần nói rõ với học viên\n\nDữ liệu bình luận trong demo này không phải persistence thật và có thể reset theo runtime.",
+    "coverImage": "/images/posts/comments-dataflow.svg",
+    "author": {
+      "id": "a1",
+      "name": "Mai An",
+      "avatar": "/images/authors/mai-an.svg",
+      "bio": "Frontend engineer thích tối giản nhưng không đơn điệu.",
+      "email": "mai.an@example.com"
+    },
+    "category": {
+      "id": "c4",
+      "name": "Forms",
+      "slug": "forms",
+      "description": "Form handling, validation và phản hồi người dùng."
+    },
+    "publishedAt": "2026-03-05T11:10:00.000Z",
+    "tags": ["comments", "optimistic-ui", "api-routes"],
+    "readingTime": 6
+  },
+  {
+    "id": "8",
+    "title": "Cấu trúc route nhóm cho blog training dễ dạy và dễ mở rộng",
+    "slug": "cau-truc-route-group-cho-blog-training",
+    "excerpt": "Route group giúp tách marketing pages khỏi blog pages mà không làm URL phức tạp hơn cho người dùng.",
+    "content": "# Route group là công cụ tổ chức, không phải tính năng trang trí\n\nKhi chia `(marketing)` và `blog`, bạn giữ được mô hình tư duy gọn: trang giới thiệu ở một phía, luồng nội dung học tập ở phía còn lại.\n\n## Giá trị thực tế\n\n- Dễ gắn layout riêng nếu cần\n- Dễ giải thích cho học viên cấu trúc app\n- Dễ tách module khi dạy theo từng buổi\n\n## Gợi ý mở rộng\n\nBạn có thể thêm `(dashboard)` hoặc `(auth)` sau này mà không phá URL hiện tại.",
+    "coverImage": "/images/posts/route-groups.svg",
+    "author": {
+      "id": "a2",
+      "name": "Khánh Duy",
+      "avatar": "/images/authors/khanh-duy.svg",
+      "bio": "Giảng viên chuyên về React và Next.js.",
+      "email": "duy@example.com"
+    },
+    "category": {
+      "id": "c2",
+      "name": "Architecture",
+      "slug": "architecture",
+      "description": "Các bài viết về tư duy tổ chức ứng dụng."
+    },
+    "publishedAt": "2026-03-01T06:45:00.000Z",
+    "tags": ["routing", "architecture", "teaching"],
+    "readingTime": 4
+  }
+]

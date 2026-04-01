@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f7efe5"/>
+  <rect x="112" y="124" width="976" height="472" rx="42" fill="#ffffff"/>
+  <rect x="172" y="196" width="326" height="328" rx="24" fill="#1e1c1a"/>
+  <rect x="540" y="196" width="476" height="86" rx="24" fill="#efe5d8"/>
+  <rect x="540" y="314" width="418" height="26" rx="13" fill="#d9cab8"/>
+  <rect x="540" y="364" width="360" height="26" rx="13" fill="#d9cab8"/>
+  <rect x="540" y="414" width="300" height="26" rx="13" fill="#d9cab8"/>
+  <text x="214" y="392" font-size="76" font-family="Georgia, serif" fill="#f0bf62">Image</text>
+  <text x="572" y="252" font-size="40" font-family="Georgia, serif" fill="#1e1c1a">Optimized cover</text>
+  <circle cx="924" cy="168" r="78" fill="#28463e" fill-opacity="0.18"/>
+</svg>

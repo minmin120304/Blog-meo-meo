@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#efe5d8"/>
+  <rect x="94" y="110" width="454" height="500" rx="38" fill="#28463e"/>
+  <rect x="652" y="110" width="454" height="500" rx="38" fill="#c86420"/>
+  <text x="150" y="210" font-size="58" font-family="Georgia, serif" fill="#f6f1eb">Server</text>
+  <text x="705" y="210" font-size="58" font-family="Georgia, serif" fill="#fff3de">Client</text>
+  <text x="150" y="290" font-size="26" font-family="Arial, sans-serif" fill="#d8ebe4">async data</text>
+  <text x="150" y="335" font-size="26" font-family="Arial, sans-serif" fill="#d8ebe4">SEO</text>
+  <text x="150" y="380" font-size="26" font-family="Arial, sans-serif" fill="#d8ebe4">secure logic</text>
+  <text x="705" y="290" font-size="26" font-family="Arial, sans-serif" fill="#fff3de">hooks</text>
+  <text x="705" y="335" font-size="26" font-family="Arial, sans-serif" fill="#fff3de">events</text>
+  <text x="705" y="380" font-size="26" font-family="Arial, sans-serif" fill="#fff3de">browser API</text>
+  <path d="M552 360h96" stroke="#1e1c1a" stroke-width="14" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f6efe5"/>
+  <rect x="126" y="140" width="270" height="420" rx="32" fill="#1e1c1a"/>
+  <rect x="466" y="140" width="270" height="420" rx="32" fill="#28463e"/>
+  <rect x="806" y="140" width="270" height="420" rx="32" fill="#c86420"/>
+  <text x="194" y="250" font-size="58" font-family="Georgia, serif" fill="#f6f1eb">SSR</text>
+  <text x="530" y="250" font-size="58" font-family="Georgia, serif" fill="#f6f1eb">SSG</text>
+  <text x="874" y="250" font-size="58" font-family="Georgia, serif" fill="#fff3de">CSR</text>
+  <text x="176" y="325" font-size="24" font-family="Arial, sans-serif" fill="#d8d3ce">per request</text>
+  <text x="514" y="325" font-size="24" font-family="Arial, sans-serif" fill="#d8ebe4">build time</text>
+  <text x="860" y="325" font-size="24" font-family="Arial, sans-serif" fill="#fff3de">interactive</text>
+</svg>

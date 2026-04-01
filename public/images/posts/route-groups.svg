@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f5ece0"/>
+  <circle cx="1040" cy="110" r="96" fill="#28463e" fill-opacity="0.16"/>
+  <rect x="160" y="128" width="380" height="440" rx="34" fill="#c86420"/>
+  <rect x="660" y="128" width="380" height="440" rx="34" fill="#1e1c1a"/>
+  <text x="226" y="248" font-size="52" font-family="Georgia, serif" fill="#fff3de">(marketing)</text>
+  <text x="226" y="328" font-size="24" font-family="Arial, sans-serif" fill="#fff3de">home</text>
+  <text x="226" y="366" font-size="24" font-family="Arial, sans-serif" fill="#fff3de">about</text>
+  <text x="226" y="404" font-size="24" font-family="Arial, sans-serif" fill="#fff3de">contact</text>
+  <text x="732" y="248" font-size="52" font-family="Georgia, serif" fill="#f6f1eb">blog</text>
+  <text x="732" y="328" font-size="24" font-family="Arial, sans-serif" fill="#f6f1eb">listing</text>
+  <text x="732" y="366" font-size="24" font-family="Arial, sans-serif" fill="#f6f1eb">detail</text>
+  <text x="732" y="404" font-size="24" font-family="Arial, sans-serif" fill="#f6f1eb">category</text>
+</svg>
