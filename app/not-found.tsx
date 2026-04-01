@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/Button";
 export default function NotFound() {
   return (
     <div className="shell flex min-h-[60vh] items-center justify-center py-20">
-      <div className="max-w-xl rounded-[2rem] border border-ink/8 bg-white/85 p-10 text-center shadow-soft">
+      <div className="max-w-xl rounded-lg border border-gray-200 bg-white p-8 text-center shadow-sm">
         <p className="eyebrow">404</p>
-        <h1 className="mt-3 font-display text-5xl text-ink">Không tìm thấy nội dung.</h1>
+        <h1 className="mt-3 text-4xl font-semibold text-ink">Không tìm thấy nội dung.</h1>
         <p className="mt-4 text-sm leading-7 text-ink/66">
           Route này không tồn tại hoặc bài viết đã bị gỡ khỏi dữ liệu mẫu.
         </p>

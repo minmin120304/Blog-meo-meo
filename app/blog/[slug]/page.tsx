@@ -58,20 +58,14 @@ export default async function PostPage({ params }: PostPageProps) {
   const relatedPosts = await getRelatedPosts(post, 3);
 
   return (
-    <article className="grid gap-10">
-      <div className="space-y-5">
+    <article className="grid gap-8">
+      <div className="space-y-4">
         <Link className="inline-flex items-center gap-2 text-sm font-medium text-primary-700" href="/blog">
           <ArrowLeft className="h-4 w-4" />
           Quay lại blog
         </Link>
-        <CategoryBadge
-          href={`/blog/category/${post.category.slug}`}
-          label={post.category.name}
-          subtle
-        />
-        <h1 className="font-display text-5xl leading-tight text-ink md:text-6xl">
-          {post.title}
-        </h1>
+        <CategoryBadge href={`/blog/category/${post.category.slug}`} label={post.category.name} subtle />
+        <h1 className="text-4xl font-semibold leading-tight text-ink md:text-5xl">{post.title}</h1>
         <p className="max-w-3xl text-base leading-8 text-ink/66">{post.excerpt}</p>
         <div className="flex flex-wrap items-center gap-6 text-sm text-ink/56">
           <span className="inline-flex items-center gap-2">
@@ -86,7 +80,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
       </div>
 
-      <div className="relative aspect-[16/8] overflow-hidden rounded-[2.2rem] border border-white/70 shadow-soft">
+      <div className="relative aspect-[16/8] overflow-hidden rounded-lg border border-gray-200">
         <Image
           alt={post.title}
           className="object-cover"
@@ -97,9 +91,9 @@ export default async function PostPage({ params }: PostPageProps) {
         />
       </div>
 
-      <Card className="grid gap-8">
+      <Card className="grid gap-6">
         <div className="flex items-center gap-4">
-          <div className="relative h-14 w-14 overflow-hidden rounded-full border border-ink/10">
+          <div className="relative h-14 w-14 overflow-hidden rounded-full border border-gray-200">
             <Image alt={post.author.name} fill sizes="56px" src={post.author.avatar} />
           </div>
           <div>
@@ -114,7 +108,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <section className="grid gap-6">
           <div>
             <p className="eyebrow">Related posts</p>
-            <h2 className="mt-2 font-display text-4xl text-ink">Đọc tiếp theo</h2>
+            <h2 className="mt-2 text-2xl font-semibold text-ink">Đọc tiếp theo</h2>
           </div>
           <PostList posts={relatedPosts} />
         </section>

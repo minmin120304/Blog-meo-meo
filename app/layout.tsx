@@ -32,8 +32,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body>
-        <div className="relative min-h-screen overflow-x-hidden">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] bg-gradient-to-b from-gold/20 to-transparent" />
+        <div className="min-h-screen">
           <Header />
           <main>{children}</main>
           <Footer />

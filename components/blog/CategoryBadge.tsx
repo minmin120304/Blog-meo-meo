@@ -14,10 +14,8 @@ export default function CategoryBadge({
   subtle = false
 }: CategoryBadgeProps) {
   const className = cn(
-    "inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] transition",
-    subtle
-      ? "bg-primary-50 text-primary-700"
-      : "bg-ink text-mist hover:bg-primary-700"
+    "inline-flex rounded-md px-2.5 py-1 text-xs font-medium uppercase tracking-[0.08em] transition",
+    subtle ? "bg-gray-100 text-primary-700" : "bg-gray-100 text-ink hover:bg-gray-200"
   );
 
   if (!href) {

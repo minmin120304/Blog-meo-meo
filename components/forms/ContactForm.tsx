@@ -74,7 +74,7 @@ export default function ContactForm() {
         {...register("message")}
       />
 
-      <div className="flex flex-wrap items-center justify-between gap-4 rounded-[1.8rem] border border-ink/8 bg-mist/80 px-5 py-4">
+      <div className="flex flex-wrap items-center justify-between gap-4 rounded-md border border-gray-200 bg-gray-50 px-4 py-4">
         <p className="inline-flex items-center gap-2 text-sm text-ink/62">
           <MailCheck className="h-4 w-4 text-primary-700" />
           Phản hồi demo được mô phỏng qua API route nội bộ.

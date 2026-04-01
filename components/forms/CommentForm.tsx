@@ -85,12 +85,7 @@ export default function CommentForm({
     <form className="grid gap-4" onSubmit={onSubmit}>
       <div className="grid gap-4 md:grid-cols-2">
         <Input error={errors.author?.message} label="Tên hiển thị" {...register("author")} />
-        <Input
-          error={errors.email?.message}
-          label="Email"
-          type="email"
-          {...register("email")}
-        />
+        <Input error={errors.email?.message} label="Email" type="email" {...register("email")} />
       </div>
 
       <Textarea

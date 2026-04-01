@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+    <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
       <section className="space-y-5">
         <p className="eyebrow">Contact</p>
         <h1 className="section-title">Liên hệ để bàn về roadmap học hoặc demo trên lớp.</h1>
@@ -20,7 +20,7 @@ export default function ContactPage() {
         </p>
       </section>
 
-      <Card className="p-8">
+      <Card className="p-6">
         <ContactForm />
       </Card>
     </div>

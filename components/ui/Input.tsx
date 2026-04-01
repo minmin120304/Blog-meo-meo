@@ -13,7 +13,7 @@ export function Input({ className, error, label, ...props }: InputProps) {
       {label ? <span>{label}</span> : null}
       <input
         className={cn(
-          "w-full rounded-3xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink shadow-sm outline-none transition placeholder:text-ink/35 focus:border-primary-400 focus:ring-4 focus:ring-primary-100",
+          "w-full rounded-md border border-gray-300 bg-white px-3 py-2.5 text-sm text-ink outline-none transition placeholder:text-ink/35 focus:border-primary-400 focus:ring-2 focus:ring-primary-100",
           error && "border-red-300 focus:border-red-400 focus:ring-red-100",
           className
         )}

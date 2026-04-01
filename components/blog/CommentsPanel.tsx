@@ -22,13 +22,15 @@ export default function CommentsPanel({
   const [comments, setComments] = useState<Comment[]>(initialComments);
 
   return (
-    <Card className="sticky top-28 grid gap-6">
+    <Card className="sticky top-24 grid gap-6">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-xs uppercase tracking-[0.24em] text-ink/42">Parallel route</p>
-          <h2 className="mt-2 font-display text-3xl text-ink">Thảo luận</h2>
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-ink/42">
+            Parallel route
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-ink">Thảo luận</h2>
         </div>
-        <span className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-3 py-1 text-xs font-medium text-primary-800">
+        <span className="inline-flex items-center gap-2 rounded-md bg-gray-100 px-3 py-1 text-xs font-medium text-ink">
           <MessageSquareText className="h-4 w-4" />
           {comments.length} bình luận
         </span>
@@ -51,19 +53,16 @@ export default function CommentsPanel({
       <div className="grid gap-4">
         {comments.length ? (
           comments.map((comment) => (
-            <article
-              key={comment.id}
-              className="rounded-[1.6rem] border border-ink/8 bg-mist/72 p-5"
-            >
+            <article key={comment.id} className="rounded-md border border-gray-200 bg-gray-50 p-4">
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <h3 className="font-medium text-ink">{comment.author}</h3>
-                  <p className="text-xs uppercase tracking-[0.18em] text-ink/42">
+                  <p className="text-xs uppercase tracking-[0.08em] text-ink/42">
                     {formatDate(comment.createdAt)}
                   </p>
                 </div>
                 {comment.pending ? (
-                  <span className="rounded-full bg-gold/25 px-3 py-1 text-xs font-medium text-ink">
+                  <span className="rounded-md bg-yellow-100 px-2.5 py-1 text-xs font-medium text-ink">
                     Đang gửi
                   </span>
                 ) : null}
@@ -72,7 +71,7 @@ export default function CommentsPanel({
             </article>
           ))
         ) : (
-          <div className="rounded-[1.6rem] border border-dashed border-ink/12 px-4 py-10 text-center text-sm text-ink/58">
+          <div className="rounded-md border border-dashed border-gray-300 px-4 py-8 text-center text-sm text-ink/58">
             Chưa có bình luận nào. Hãy mở đầu cuộc thảo luận.
           </div>
         )}

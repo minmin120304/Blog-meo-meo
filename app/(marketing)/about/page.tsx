@@ -42,9 +42,10 @@ export default function AboutPage() {
         <p className="eyebrow">About this project</p>
         <h1 className="section-title">Một blog training được dựng để dạy đúng trọng tâm.</h1>
         <p className="text-base leading-8 text-ink/68">
-          Thay vì làm một landing page quá mỏng hoặc một sản phẩm quá lớn, dự án này chọn
-          đúng ngưỡng vừa đủ: nhiều loại route, nhiều kiểu render, forms có validation và
-          luồng dữ liệu nội bộ để học viên thấy được tư duy xây ứng dụng bằng Next.js.
+          Thay vì làm một landing page quá mỏng hoặc một sản phẩm quá lớn, dự án này
+          chọn đúng ngưỡng vừa đủ: nhiều loại route, nhiều kiểu render, form có
+          validation và luồng dữ liệu nội bộ để học viên thấy được tư duy xây ứng
+          dụng bằng Next.js.
         </p>
       </section>
 
@@ -53,10 +54,10 @@ export default function AboutPage() {
           const Icon = value.icon;
           return (
             <Card key={value.title} className="grid gap-4">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-50 text-primary-700">
-                <Icon className="h-6 w-6" />
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-gray-100 text-primary-700">
+                <Icon className="h-5 w-5" />
               </span>
-              <h2 className="font-display text-3xl text-ink">{value.title}</h2>
+              <h2 className="text-xl font-semibold text-ink">{value.title}</h2>
               <p className="text-sm leading-7 text-ink/68">{value.description}</p>
             </Card>
           );

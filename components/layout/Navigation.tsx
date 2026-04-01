@@ -15,24 +15,16 @@ export default function Navigation({ compact = false, onNavigate }: NavigationPr
   const pathname = usePathname();
 
   return (
-    <nav
-      className={cn(
-        "flex items-center gap-2",
-        compact ? "flex-col items-stretch" : "hidden md:flex"
-      )}
-    >
+    <nav className={cn("flex items-center gap-2", compact ? "flex-col items-stretch" : "hidden md:flex")}>
       {NAV_ITEMS.map((item) => {
-        const active =
-          item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+        const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
 
         return (
           <Link
             key={item.href}
             className={cn(
-              "rounded-full px-4 py-2 text-sm font-medium transition",
-              active
-                ? "bg-ink text-mist"
-                : "text-ink/72 hover:bg-white/80 hover:text-ink",
+              "rounded-md px-3 py-2 text-sm font-medium transition",
+              active ? "bg-gray-900 text-white" : "text-ink/72 hover:bg-gray-100 hover:text-ink",
               compact && "w-full text-left"
             )}
             href={item.href}

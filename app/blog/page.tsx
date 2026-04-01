@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 
 import PostList from "@/components/blog/PostList";
 import SearchBar from "@/components/blog/SearchBar";
-import { Card } from "@/components/ui/Card";
 import { buildPageNumbers } from "@/lib/utils";
 import { getCategories, getPostsPage } from "@/lib/api";
 
@@ -45,19 +44,13 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     <div className="shell grid gap-10 py-12 md:py-16">
       <section className="grid gap-5">
         <p className="eyebrow">Blog library</p>
-        <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
-          <div className="space-y-4">
-            <h1 className="section-title">Tất cả bài viết và bài học trong demo.</h1>
-            <p className="max-w-3xl text-base leading-8 text-ink/66">
-              Search chạy ở client bằng URL params, còn dữ liệu listing vẫn được render
-              từ server để giữ SEO và cấu trúc rõ ràng cho mục tiêu đào tạo.
-            </p>
-          </div>
-          <Card className="grid gap-3">
-            <p className="text-xs uppercase tracking-[0.24em] text-ink/42">Thống kê</p>
-            <p className="font-display text-4xl text-ink">{result.totalPosts}</p>
-            <p className="text-sm leading-7 text-ink/62">bài viết hiện có trong dữ liệu mẫu.</p>
-          </Card>
+        <div className="space-y-4">
+          <h1 className="section-title">Tất cả bài viết và bài học trong demo.</h1>
+          <p className="max-w-3xl text-base leading-8 text-ink/66">
+            Search chạy ở client bằng URL params, còn dữ liệu listing vẫn được render từ
+            server để giữ SEO và cấu trúc rõ ràng cho mục tiêu đào tạo.
+          </p>
+          <p className="text-sm text-ink/60">Tổng số bài viết: {result.totalPosts}</p>
         </div>
       </section>
 
@@ -65,8 +58,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         <SearchBar />
         <div className="flex flex-wrap gap-3">
           <Link
-            className={`rounded-full px-4 py-2 text-sm transition ${
-              !category ? "bg-ink text-mist" : "bg-white/75 text-ink/70 hover:bg-white"
+            className={`rounded-md px-4 py-2 text-sm transition ${
+              !category
+                ? "bg-gray-900 text-white"
+                : "border border-gray-300 bg-white text-ink/70 hover:bg-gray-50"
             }`}
             href={q ? `/blog?q=${encodeURIComponent(q)}` : "/blog"}
           >
@@ -80,10 +75,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             return (
               <Link
                 key={item.slug}
-                className={`rounded-full px-4 py-2 text-sm transition ${
+                className={`rounded-md px-4 py-2 text-sm transition ${
                   category === item.slug
-                    ? "bg-ink text-mist"
-                    : "bg-white/75 text-ink/70 hover:bg-white"
+                    ? "bg-gray-900 text-white"
+                    : "border border-gray-300 bg-white text-ink/70 hover:bg-gray-50"
                 }`}
                 href={`/blog?${params.toString()}`}
               >
@@ -100,10 +95,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           {buildPageNumbers(result.totalPages).map((pageNumber) => (
             <Link
               key={pageNumber}
-              className={`inline-flex h-11 w-11 items-center justify-center rounded-full text-sm font-medium transition ${
+              className={`inline-flex h-10 w-10 items-center justify-center rounded-md text-sm font-medium transition ${
                 pageNumber === result.currentPage
-                  ? "bg-ink text-mist"
-                  : "bg-white/80 text-ink hover:bg-white"
+                  ? "bg-gray-900 text-white"
+                  : "border border-gray-300 bg-white text-ink hover:bg-gray-50"
               }`}
               href={makePageHref(pageNumber)}
             >
